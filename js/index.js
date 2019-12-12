@@ -294,7 +294,8 @@ $(function () {
             if (null !== targetShapeIdxs[currentPage]) {
                 // 複製図形移動の場合
                 sps.moveShape(pageShapes[currentPage][targetShapeIdxs[currentPage]], dx, dy);
-
+                targetIdx = sps.getSelectShapeIdx(downPoint, pageShapes[currentPage]);
+                targetShapeIdxs[currentPage] = sps.resortShapesForSelect(targetIdx, pageShapes[currentPage]);
             } else if (circleTouched) {
                 // 図形回転の場合
                 sps.rotateShape([currentX, currentY], pageShapes[currentPage][selectShapeIdxs[currentPage]]);
@@ -337,16 +338,25 @@ $(function () {
         let touchEndX = Math.floor(downPoint[0]);
         let touchEndY = Math.floor(downPoint[1]);
 
-        if (Math.abs(touchStartX - touchEndX) < 3 && Math.abs(touchStartY - touchEndY) < 3) {
+        if (Math.abs(touchStartX - touchEndX) < 3 && Math.abs(touchStartY - touchEndY) < 3) 
+        {
             // クリック判定（タッチ開始時座標と終了座標が僅差であればクリックとみなす）
             let selectIdx = sps.getSelectShapeIdx(downPoint, pageShapes[currentPage]);
-            if (selectIdx !== null) {
+            if (selectIdx !== null) 
+            {
                 // 選択した図形が手前に描画されるよう図形データの配列順番を調整し、最後尾の選択図形のインデックスを取得
                 selectShapeIdxs[currentPage] = sps.resortShapesForSelect(selectIdx, pageShapes[currentPage]);
-            } else {
+            }
+            /*
+            else 
+            {
                 selectShapeIdxs[currentPage] = null;  // 図形選択なし
             }
-        } else {
+            */
+        } 
+        /*
+        else 
+        {
             // クリックではなくドラッグ後のマウスアップ（タッチ終了）の場合
             if (targetShapeIdxs[currentPage] !== null) {
                 // 移動終了の場合は移動後の座標を補正
@@ -355,7 +365,7 @@ $(function () {
                 // sps.moveNearestShape(targetShapeIdxs[currentPage], baseShapes[currentPage], dx, dy);
             }
         }
-
+        */
         targetShapeIdxs[currentPage] = null;  // 移動対象の図形設定を解除
     };
     canvas.addEventListener('mouseup', onMouseUp, false);

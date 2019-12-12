@@ -1,8 +1,8 @@
 const ShapeService = function () {
   // ベース図形
   this.baseShapeColor = [
-    'rgb(175,217,234)',
-    'rgb(253,155,160)',
+    'rgba(175,217,234,0.4)',
+    'rgba(253,155,160,0.4)',
   ];       // 図形の色
 
   this.baseShapeLineColor = 'rgba(0, 0, 0, 1)';   // 線の色
@@ -56,7 +56,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(142,211,245,0.85)'], //図形の色
+      'color': ['rgb(142,211,245)'], //図形の色
       'matrix': [
         [square0Left, square0Top],
         [square0Left, square0Top + baseLength],
@@ -93,7 +93,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(4,170,114,0.85)'],
+      'color': ['rgb(4,170,114)'],
       'matrix': [
         [square1Left, square1Top],
         [square1Left, square1Top + baseLength],
@@ -130,7 +130,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(154,142,195,0.85)'],
+      'color': ['rgb(154,142,195)'],
       'matrix': [
         [Rectangle0Left, Rectangle0Top],
         [Rectangle0Left, Rectangle0Top + baseLength * 0.5],
@@ -164,7 +164,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(246,173,58,0.85)'],
+      'color': ['rgb(246,173,58)'],
       'matrix': [
         [Rectangle1Left, Rectangle1Top],
         [Rectangle1Left, Rectangle1Top + baseLength * 0.5],
@@ -199,7 +199,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(154,142,195,0.85)'],
+      'color': ['rgb(154,142,195)'],
       'matrix': [
         [miniSquare0Left, miniSquare0Top],
         [miniSquare0Left, miniSquare0Top + baseLength * 0.5],
@@ -234,7 +234,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(246,173,58,0.85)'],
+      'color': ['rgb(246,173,58)'],
       'matrix': [
         [miniSquare1Left, miniSquare1Top],
         [miniSquare1Left, miniSquare1Top + baseLength * 0.5],
@@ -270,7 +270,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(255,229,122,0.85)'],
+      'color': ['rgb(255,229,122)'],
       'matrix': [
         [Triagnle0Left, Triagnle0Top],
         [Triagnle0Left + baseLength / Math.sqrt(2), Triagnle0Top - baseLength / Math.sqrt(2)],
@@ -304,7 +304,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(0,104,183,0.85)'],
+      'color': ['rgb(0,104,183)'],
       'matrix': [
         [Triagnle1Left, Triagnle1Top],
         [Triagnle1Left + baseLength / Math.sqrt(2), Triagnle1Top - baseLength / Math.sqrt(2)],
@@ -338,7 +338,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(241,157,180,0.85)'],
+      'color': ['rgb(241,157,180)'],
       'matrix': [
         [Triagnle2Left, Triagnle2Top],
         [Triagnle2Left + baseLength / Math.sqrt(2), Triagnle2Top - baseLength / Math.sqrt(2)],
@@ -372,7 +372,7 @@ const ShapeService = function () {
       'square': [0, 0],       // 円（回転アイコン）の中心
       'initSquare': [0, 0],       // 初期の回転アイコンの中心
       'rotate': 0,   // 回転角度
-      'color': ['rgba(232,198,147,0.85)'],
+      'color': ['rgb(232,198,147)'],
       'matrix': [
         [Triagnle3Left, Triagnle3Top],
         [Triagnle3Left + baseLength / Math.sqrt(2), Triagnle3Top - baseLength / Math.sqrt(2)],
